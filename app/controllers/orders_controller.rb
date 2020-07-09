@@ -8,6 +8,11 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+    if params[:set_locale]
+      redirect_to store_index_url(locale: params[:set_locale])
+    else
+      @products = Product.order(:title)
+    end
     @search = Order.all.ransack params[:q]
     @orders = @search.result.page(params[:page]).per(5)
   end
@@ -38,8 +43,8 @@ class OrdersController < ApplicationController
         session[:cart_id] = nil
         ChargeOrderJob.perform_later(@order,pay_type_params.to_h)
         # OrderMailer.received(@order).deliver_later
-        format.html { redirect_to store_index_url, notice:
-            'Thank you for your order.' }
+        format.html { redirect_to store_index_url(locale: I18n.locale),
+            notice: I18n.t('.thanks') }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }

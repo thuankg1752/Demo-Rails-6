@@ -84,3 +84,4 @@ en:
         separator: "."
         delimiter: ","
         format: "%u%n"
+  thanks: "Thank you for your order"

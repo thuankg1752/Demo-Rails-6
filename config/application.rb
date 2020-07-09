@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 module DemoRails6
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    # config.middleware.use I18n::JS::Middleware
+    config.middleware.use I18n::JS::Middleware
     config.load_defaults 6.0
 
     # Settings in config/environments/* take precedence over those specified here.
