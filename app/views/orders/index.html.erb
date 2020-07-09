@@ -1,7 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Orders</h1>
+<%= search_form_for @search do |f| %>
 
+  <%= "Search By Name......" %>
+  <%= f.label :name_cont %>
+  <%= f.text_field :name_cont %>
+
+  <%= f.submit %>
+<% end %>
 <table>
   <thead>
     <tr>
@@ -31,3 +38,4 @@
 <br>
 
 <%= link_to 'New Order', new_order_path %>
+<p><%= paginate @orders %></p>

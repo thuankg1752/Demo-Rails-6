@@ -8,7 +8,8 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @search = Order.all.ransack params[:q]
+    @orders = @search.result.page(params[:page]).per(5)
   end
 
   # GET /orders/1

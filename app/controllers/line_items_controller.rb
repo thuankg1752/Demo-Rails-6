@@ -7,7 +7,9 @@ class LineItemsController < ApplicationController
   # GET /line_items
   # GET /line_items.json
   def index
-    @line_items = LineItem.all
+    # @line_items = LineItem.all
+    @search = LineItem.all.ransack params[:q]
+    @line_items = @search.result.page(params[:page]).per(5)
   end
 
   # GET /line_items/1

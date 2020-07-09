@@ -2,6 +2,14 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 <h1><%= t('.title_html') %></h1>
+<%= search_form_for @search do |f| %>
+
+  <%= "Search By Name......" %>
+  <%= f.label :title_cont %>
+  <%= f.text_field :title_cont %>
+
+  <%= f.submit %>
+<% end %>
 <ul class="catalog">
   <% cache @products do %>
     <% @products.each do |product| %>

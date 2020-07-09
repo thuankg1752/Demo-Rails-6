@@ -3,6 +3,7 @@ class StoreController < ApplicationController
   include CurrentCart
   before_action :set_cart
   def index
-    @products = Product.order(:title)
+    @search = Product.all.ransack params[:q]
+    @products = @search.result.page(params[:page]).per(5)
   end
 end

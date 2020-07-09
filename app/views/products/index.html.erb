@@ -3,7 +3,14 @@
 <% end %>
 
 <h1>Products</h1>
+<%= search_form_for @search do |f| %>
 
+  <%= "Search By Name......" %>
+  <%= f.label :title_cont %>
+  <%= f.text_field :title_cont %>
+
+  <%= f.submit %>
+<% end %>
 <table>
   <tfoot>
     <tr>
