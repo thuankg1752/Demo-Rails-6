@@ -16,9 +16,9 @@ class CreditCardPayType extends React.Component {
                            id="order_expiration_date"
                            size="9"
                            placeholder="e.g. 03/19" />
+                </div>
             </div>
-    </div>
-    );
+        );
     }
 }
 export default CreditCardPayType

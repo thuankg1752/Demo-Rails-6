@@ -1,13 +1,13 @@
 {
-  "application.js": "/packs/js/application-8fa47167fdd86294be76.js",
-  "application.js.map": "/packs/js/application-8fa47167fdd86294be76.js.map",
+  "application.js": "/packs/js/application-d3f0680205b12098eadf.js",
+  "application.js.map": "/packs/js/application-d3f0680205b12098eadf.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-8fa47167fdd86294be76.js"
+        "/packs/js/application-d3f0680205b12098eadf.js"
       ],
       "js.map": [
-        "/packs/js/application-8fa47167fdd86294be76.js.map"
+        "/packs/js/application-d3f0680205b12098eadf.js.map"
       ]
     },
     "hello_react": {
@@ -20,15 +20,15 @@
     },
     "pay_type": {
       "js": [
-        "/packs/js/pay_type-051a8dd5d4ddb3045865.js"
+        "/packs/js/pay_type-692aa760b357f8acb3cc.js"
       ],
       "js.map": [
-        "/packs/js/pay_type-051a8dd5d4ddb3045865.js.map"
+        "/packs/js/pay_type-692aa760b357f8acb3cc.js.map"
       ]
     }
   },
   "hello_react.js": "/packs/js/hello_react-ec556fd76a27796c0b55.js",
   "hello_react.js.map": "/packs/js/hello_react-ec556fd76a27796c0b55.js.map",
-  "pay_type.js": "/packs/js/pay_type-051a8dd5d4ddb3045865.js",
-  "pay_type.js.map": "/packs/js/pay_type-051a8dd5d4ddb3045865.js.map"
+  "pay_type.js": "/packs/js/pay_type-692aa760b357f8acb3cc.js",
+  "pay_type.js.map": "/packs/js/pay_type-692aa760b357f8acb3cc.js.map"
 }
